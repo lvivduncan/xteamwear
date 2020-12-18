@@ -1,0 +1,42 @@
+#category{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* background:var(--black); */
+}
+
+#category a{
+    height: 300px;
+    background-size:cover!important;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration:none;
+    color:var(--white);
+    font-weight:700;
+    font-size:30px;
+    text-transform:uppercase;
+    position: relative;
+}
+
+#category a::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:1;
+    background:var(--black);
+    opacity:.3;
+    transition:opacity .5s;
+}
+
+#category a:hover::after{
+    opacity:0;
+}
+
+#category a span{
+    color:var(--white);
+    z-index:2;
+    position:relative;
+}
