@@ -1,0 +1,26 @@
+#copyright{
+    background:var(--dark);
+    padding:30px 0;
+    border-top: 1px solid var(--light-gray);
+    color:var(--gray);
+    font-size:14px;
+}
+
+#copyright .container{
+    align-items: center;
+    justify-content: space-between;
+}
+
+#copyright a{
+    color:var(--gray);
+    -webkit-transition:color .5s;
+    transition:color .5s;
+}
+
+#copyright a:hover{
+    color:var(--white)
+}
+
+#copyright img{
+    height:30px
+}

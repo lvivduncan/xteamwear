@@ -1,0 +1,8 @@
+.adbanner{
+    overflow: hidden;
+}
+
+.adbanner img{
+    width:100vw;
+    vertical-align: middle;
+}

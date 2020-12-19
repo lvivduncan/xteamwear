@@ -27,12 +27,17 @@
     });
 }());
 
+$(window).scroll(function(){
+    if ($(this).scrollTop() > 50) {
+        $('#up').fadeIn();
+        $('#nav').addClass('fixed');
+    } else {
+        $('#up').fadeOut();
+        $('#nav').removeClass('fixed');
+    }
+});
 
-/* // плавне зникання сигнатури
-$(window).on('scroll', function() {
-	var percent = 0.003;
-
-	$('#slider h3').css({
-		opacity: 1 - $(window).scrollTop() * percent
-	})
-}); */
+$('#up').click(function(){
+	$("html, body").animate({ scrollTop: 0 }, 600);
+		return false;
+});

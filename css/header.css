@@ -1,8 +1,53 @@
 #header{
-    background:var(--white)
+    background:var(--white);
+    padding:12px 0
 }
 
 #header .container{
     align-items: center;
     justify-content: space-between;
+}
+
+#logo{
+    font-weight:700;
+    font-size:20px;
+    color:var(--black);
+    text-decoration:none;
+    text-transform: uppercase;
+    display:block;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#search form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search input[type="search"]{
+    padding:5px;
+    background:var(--light);
+    outline:none;
+    border:none;
+    border-radius:3px;
+    color:var(--gray)
+}
+
+#search button{
+    border:none;
+    outline:none;
+    background:none;
+    cursor:pointer;
+    padding:0 5px;
+}
+
+#search button svg{
+    width: 16px;
+    fill:var(--dark);
+    -webkit-transition:fill .5s;
+    transition:fill .5s;
+}
+
+#search button:hover svg{
+    fill:var(--black)
 }
