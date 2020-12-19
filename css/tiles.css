@@ -1,0 +1,12 @@
+/* товари плиткою */
+
+.tiles{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:10px;
+    margin:10px 0
+}
+
+.tiles figcaption{
+    text-align:center;
+}

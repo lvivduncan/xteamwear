@@ -72,3 +72,11 @@
     display:block;
     margin: 0 20px
 }
+
+#search-small{
+    display: none;
+}
+
+.fixed #search-small{
+    display: inline-block;
+}

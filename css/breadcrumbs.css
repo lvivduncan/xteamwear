@@ -1,0 +1,28 @@
+#breadcrumbs{
+    display: inline-block;
+    margin:20px 0
+}
+
+#breadcrumbs li{
+    display: inline-block;
+    color:var(--gray);
+    font-size:14px
+}
+
+#breadcrumbs li::before{
+    content: '>';
+    display:inline-block;
+    margin:0 5px;
+    position: relative;
+    top:2px
+}
+
+#breadcrumbs li:first-child::before{
+    content: '';
+    margin:0;
+}
+
+#breadcrumbs a{
+    color:var(--gray);
+    text-decoration:none;
+}
