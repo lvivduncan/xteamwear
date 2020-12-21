@@ -12,6 +12,12 @@
     width:380px;
 }
 
+@media(max-width:500px){
+    #contact{
+        width:100%
+    }
+}
+
 #contact input,
 #contact textarea{
     width: 100%;

@@ -17,6 +17,7 @@
     --light-gray: #e6e6e6;
     --gray:#969696;
     --dark-gray:#3b3b3b;
+    --red:#ed4848;
 }
 
 body{
@@ -27,6 +28,12 @@ body{
 
 h1,h2,h3,h4{
     margin:0 0 30px
+}
+
+h5{
+    font-weight:700;
+    font-size:13px;
+    margin:0 0 20px;
 }
 
 p{
@@ -50,6 +57,11 @@ img{
     max-width:100%!important;
     height:auto;
 }
+
+table,th,td{
+    border-collapse: collapse;
+}
+
 
 /* сірий блок з підзаголовком */
 .heading{
@@ -81,8 +93,8 @@ img{
 
 
 #up{ 
-    bottom: 50px; 
-    right:50px; 
+    bottom:20px; 
+    right:20px; 
     display:none; 
     font-size: 30px; 
     position:fixed; 

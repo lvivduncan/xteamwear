@@ -1,0 +1,138 @@
+/* товар */
+#item{
+    display: grid;
+    grid-gap:20px;
+    grid-template-columns:repeat(2,1fr);
+    margin-bottom:20px;
+}
+
+/* ліва колонка */
+#item-view{
+    text-align:center;
+}
+
+/* велике фото */
+#item-image{
+
+}
+
+/* мініатюри */
+#item-thumbs{
+    
+}
+
+#item-thumbs img{
+    width: 100px;
+}
+
+
+/* таблиця з цінами */
+#item-view table{
+    border: 2px solid var(--white);
+    table-layout: fixed;
+    width: 100%;
+}
+
+#item-view table caption{
+    background:var(--light);
+    font-weight:600;
+    padding:5px;
+    border-bottom:1px solid var(--light-gray)
+}
+
+#item-view table th{
+    text-transform: uppercase;
+}
+
+#item-view table td, 
+#item-view table th {
+    background-clip: padding-box;
+    border: 1px solid var(--light-gray);
+    max-width: 30%;
+    padding: 10px;
+    text-align: center;
+    /* user-select: none; */
+    width: 30%;
+}
+
+#item-view table td:first-child, 
+#item-view table th:first-child{
+    text-align:left
+}
+
+/* права */
+#item-option{
+
+}
+
+#item-option h1{
+    font-size: 20px;
+    letter-spacing: normal;
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+#item-option table{
+    border: 2px solid var(--white);
+    table-layout: fixed;
+    width: 100%;
+}
+
+#item-option table th{
+    text-transform: uppercase;
+}
+
+#item-option table td, 
+#item-option table th {
+    background-clip: padding-box;
+    border: 1px solid var(--light-gray);
+    max-width: 30%;
+    padding: 13px;
+    text-align: center;
+    /* user-select: none; */
+    width: 30%;
+}
+
+#item-option table td:first-child, 
+#item-option table th:first-child{
+    text-align:left
+}
+
+/* кольорові кнопки */
+.buttons-colors{
+    margin:10px 0 20px
+}
+
+.buttons-colors button{
+    border:1px solid var(--light-gray);
+    border-radius:3px;
+    background:var(--white);
+    outline:none;
+    cursor:pointer;
+    padding:10px;
+}
+
+.buttons-colors button:hover,
+.buttons-colors button.active{
+    background:var(--dark);
+    color:var(--white);
+}
+
+/* варіанти */
+.buttons-options{
+    margin: 10px 0
+}
+
+.buttons-options button{
+    width:80px;
+    border:3px solid var(--white);
+    border-radius:3px;
+    outline:none;
+    background:none;
+    cursor:pointer;
+}
+
+.buttons-options button.active{
+    border-color: var(--red);
+}

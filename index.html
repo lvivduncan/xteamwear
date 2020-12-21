@@ -23,6 +23,9 @@
     </header>
 
     <nav id="nav">
+        <span id="menu-button">
+            <svg viewBox="0 0 100 80"><rect width="100" height="15"></rect><rect y="30" width="100" height="15"></rect><rect y="60" width="100" height="15"></rect></svg>
+        </span>
         <a href="" id="logo-small">Назва сайту</a>
         <ul class="container">
             <li><a href="">Головна</a></li>
@@ -169,17 +172,21 @@
     <script src="js/jquery.motio.min.js"></script>
     <script>
         // slider
-        (function () {
-            var $example = $('#slider');
-            var frame = $example.find('.container')[0];
-            var offset = $example.offset();
+        // (function () {
+            
+        // }());
+
+        $(function(){
+            var $slider = $('#slider');
+            var frame = $slider.find('.container')[0];
+            var offset = $slider.offset();
             var motio = new Motio(frame, {
                 fps: 30,
                 bgWidth: 1024,
                 bgHeight: 1024
             });
 
-            $example.on('mouseenter mouseleave', function (event) {
+            $slider.on('mouseenter mouseleave', function (event) {
                 if (event.type === 'mouseenter') {
                     motio.play();
                 } else {
@@ -188,14 +195,14 @@
             });
 
             $(window).on('resize', function () {
-                offset = $example.offset();
+                offset = $slider.offset();
             });
 
-            $example.on('mousemove', function (event) {
+            $slider.on('mousemove', function (event) {
                 motio.set('speedX', event.pageX - offset.left - motio.width / 2);
                 motio.set('speedY', event.pageY - offset.top - motio.height / 2);
-            });
-        }());
+            });            
+        });
     </script>
     <script src="js/init.js"></script>
 </body>

@@ -3,9 +3,16 @@
     grid-template-columns: repeat(3,1fr);
 }
 
+@media(max-width:776px){
+    #category{
+        grid-template-columns: repeat(2,1fr)
+    }
+}
+
 #category a{
     height: 300px;
     background-size:cover!important;
+    background-position: center center!important;
     display:flex;
     align-items: center;
     justify-content: center;

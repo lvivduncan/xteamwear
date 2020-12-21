@@ -11,6 +11,12 @@
     justify-content: space-between;
 }
 
+@media(max-width:776px){
+    #copyright .container{
+        display: block;
+    }
+}
+
 #copyright a{
     color:var(--gray);
     -webkit-transition:color .5s;
@@ -23,6 +29,12 @@
 
 #copyright img{
     height:30px
+}
+
+@media(max-width:776px){
+    #copyright img{
+        margin-top: 20px
+    }
 }
 
 #copyright p{
