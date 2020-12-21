@@ -2,11 +2,12 @@
     height:420px
 }
 
-/* @media(max-width:776px){
+@media(max-width:776px){
     #slider{
+        /* height: 260px */
         display: none;
     }
-} */
+}
 
 #slider .container{
     width: 100%;
@@ -23,6 +24,7 @@
     font-size: 40px;
     text-transform: uppercase;
     padding:10px;
+    margin:0;
     text-align:center;
     -webkit-animation: zoomIn 1s both 2s; 
     animation: zoomIn 1s both 2s;
