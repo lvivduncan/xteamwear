@@ -14,8 +14,9 @@
     --light:#fafafa;
     --black:#000;
     --dark:#232323;
+    --light-gray: #e6e6e6;
     --gray:#969696;
-    --light-gray:#3b3b3b;
+    --dark-gray:#3b3b3b;
 }
 
 body{

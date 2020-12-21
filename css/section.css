@@ -1,0 +1,261 @@
+/* категорія */
+#section{
+    gap:20px;
+    margin-bottom:20px
+}
+
+/* sidebar */
+#categories{
+    width: 25%
+}
+
+#categories h4{
+    font-size:16px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--light-gray);
+    margin-bottom: 10px;
+    padding-bottom: 10px
+}
+
+#categories ul,
+#categories li{
+    display: block;
+}
+
+#categories ul ul{
+    margin:0 0 0 20px
+}
+
+#categories li a{
+    font-size: 13px;
+    display: inline-block;
+    font-weight: 600;
+    color: var(--dark);
+    padding: 7px 0px 6px 0;
+    line-height: 22px;
+    text-decoration:none;
+    position: relative;    
+}
+
+#categories li li a{
+
+    -webkit-transition: padding-left 0.3s linear;
+    transition: padding-left 0.3s linear;
+}
+
+#categories li li a::before{
+    content:'>';
+    margin-right:10px;
+    color:var(--gray);
+    position: absolute;
+    top:7px;
+    left:0;
+    display: none;
+}
+
+#categories li li a.active,
+#categories li li a:hover{
+    padding-left:16px;
+}
+
+#categories li li a.active::before,
+#categories li li a:hover::before{
+    display: inline-block;
+}
+
+
+/* main */
+#googs-wrapper{
+    width:75%
+}
+
+#goods-wrapper h1{
+    font-size:22px;
+    text-transform: uppercase;
+}
+
+/* кнопки сортування */
+.toolbar{
+    padding: 10px;
+    margin:0 0 10px;
+    background:var(--light);
+    text-transform: uppercase;
+    color:var(--dark-gray);
+    display: flex;
+    align-items: center;
+
+}
+
+.toolbar button{
+    cursor:pointer;
+    margin:0 0 0 5px;
+    padding:3px;
+    background:none;
+    border: 1px solid var(--light-gray);
+    outline:none;
+    color: var(--light-gray);
+    display: inline-flex;
+}
+
+.toolbar button.active{
+    border-color:var(--dark-gray);
+    color:var(--dark-gray);
+}
+
+.toolbar button span{
+    width:4px;
+    height:18px;
+    background:var(--light-gray);
+    display: block;
+    margin: 0 1px;
+}
+
+.toolbar button.active span{
+    background:var(--dark-gray);
+}
+
+/* 1 елемент */
+.toolbar button:first-child{
+    flex-flow: column;
+}
+
+.toolbar button:first-child span{
+    width:18px;
+    height:4px;
+    margin: 1px 0;
+}
+
+/* кнопки */
+#button-horizontal{}
+#button-vertical-two{}
+#button-vertical-three{}
+#button-vertical-four{}
+#button-vertical-five{}
+/* todo: ховати на мобільних */
+
+/* товари */
+#goods{
+    display: grid;
+    grid-gap:20px;
+}
+
+#goods figure{
+    position: relative;
+}
+
+#goods figure > a{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:1;
+    background:var(--white);
+    opacity:0;
+    -webkit-transition:opacity .5s;
+    transition:opacity .5s;
+}
+
+#goods figure > a:hover{
+    opacity:.3;
+}
+
+/* heart */
+.wishlist{
+    border-radius:50%;
+    background:var(--white);
+    display: block;
+    margin:-15px 0 0 -15px;
+    width:30px;
+    height:30px;
+    padding:5px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    z-index:2;
+    opacity:0;
+    cursor:pointer
+}
+.wishlist svg{
+    width:20px;
+    position: relative;
+    top:2px;
+    fill:var(--dark);
+}
+
+#goods figure:hover .wishlist{
+    opacity:1;
+}
+
+/* опис товару */
+#goods .description{
+    text-align: center;
+}
+
+#goods h3{
+    margin:0;
+}
+
+#goods h3 a{
+    color: var(--dark);
+    margin-bottom: 4px;
+    text-transform: none;
+    font-size: 12px;
+    line-height: 22px;
+    text-decoration:none;
+}
+
+/* опис тільки на горизонтальній розкладці */
+#goods .description p{
+    line-height: 1.7;
+    margin:0 0 15px;
+    display: none;
+}
+
+#goods .price{
+    color:var(--dark);
+    font-weight:700;
+}
+
+/* мініатюрки */
+#goods .thumbs img{
+    width:40px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+
+/* варіанти відображення */
+/* горизонтальна розкладка */
+#goods.horizontal article{
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-gap:20px
+}
+
+#goods.horizontal .description{
+    text-align:left
+}
+
+#goods.horizontal .description p{
+    display:block
+}
+
+#goods.horizontal .price{
+    margin:0 0 20px
+}
+
+/* вертикальні */
+#goods.vertical-two{
+    grid-template-columns: repeat(2,1fr);
+}
+#goods.vertical-three{
+    grid-template-columns: repeat(3,1fr);
+}
+#goods.vertical-four{
+    grid-template-columns: repeat(4,1fr);
+}
+#goods.vertical-five{
+    grid-template-columns: repeat(5,1fr);
+}
