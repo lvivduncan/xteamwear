@@ -9,6 +9,12 @@
     width: 25%
 }
 
+@media(max-width:776px){
+    #categories{
+        display: none;
+    }
+}
+
 #categories h4{
     font-size:16px;
     text-transform: uppercase;
@@ -38,7 +44,6 @@
 }
 
 #categories li li a{
-
     -webkit-transition: padding-left 0.3s linear;
     transition: padding-left 0.3s linear;
 }
@@ -65,8 +70,14 @@
 
 
 /* main */
-#googs-wrapper{
+#goods-wrapper{
     width:75%
+}
+
+@media(max-width:776px){
+    #goods-wrapper{
+        width:100%
+    }
 }
 
 #goods-wrapper h1{
@@ -83,7 +94,6 @@
     color:var(--dark-gray);
     display: flex;
     align-items: center;
-
 }
 
 .toolbar button{
@@ -125,13 +135,47 @@
     margin: 1px 0;
 }
 
+/* offset button */
+#offset-aside-nav{
+    display: none;
+}
+
+@media(max-width:776px){
+    #offset-aside-nav{
+        display: inline-flex;
+        align-items: center;
+        margin-right:auto
+    }
+}
+
+#offset-aside-nav button{
+    margin-right:5px
+}
+
+#offset-aside-nav svg{
+    width:20px;
+    fill:var(--dark);
+}
+
 /* кнопки */
 #button-horizontal{}
 #button-vertical-two{}
 #button-vertical-three{}
 #button-vertical-four{}
+
+@media(max-width:500px){
+    #button-vertical-three,
+    #button-vertical-four{
+        display: none;
+    }
+}
 #button-vertical-five{}
-/* todo: ховати на мобільних */
+
+@media(max-width:776px){
+    #button-vertical-five{
+        display: none;
+    }
+}
 
 /* товари */
 #goods{
@@ -223,6 +267,12 @@
     width:40px;
     border-radius:50%;
     cursor:pointer;
+}
+
+@media(max-width:500px){
+    #goods .thumbs img{
+        width:30px;
+    }
 }
 
 

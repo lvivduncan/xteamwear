@@ -1,12 +1,18 @@
 
 $(function(){
     $(window).scroll(function(){
-        if ($(this).scrollTop() > 10) {
-            $('#up').fadeIn();
+        if ($(this).scrollTop() > 10 && $(window).width()>777) {
             $('#nav').addClass('fixed');
         } else {
-            $('#up').fadeOut();
             $('#nav').removeClass('fixed');
+        }
+    }); 
+
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('#up').fadeIn();
+        } else {
+            $('#up').fadeOut();
         }
     });    
 });
