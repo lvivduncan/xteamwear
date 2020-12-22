@@ -6,23 +6,28 @@
 
 /* sidebar */
 #categories{
-    width: 25%;
-    background:var(--white)
+    width: 25%
 }
 
 @media(max-width:776px){
     #categories{
-        padding:20px;
         position: fixed;
         top:0;
         left:0;
         z-index:50;
+        width:260px;
         height:100vh;
-        box-shadow: 0 0 20px rgba(0,0,0,0.3);
         -webkit-transition: all .5s;
         transition: all .5s;
         -webkit-transform: translate(-100%,0);
         transform: translate(-100%,0)
+    }
+    #categories.offset{
+        padding:20px;
+        background:var(--white);
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0)
     }
 }
 
@@ -41,6 +46,11 @@
 
 #categories ul ul{
     margin:0 0 0 20px
+}
+
+/* випадачка */
+#categories li > ul{
+    display: none;
 }
 
 #categories li a{
@@ -79,6 +89,34 @@
     display: inline-block;
 }
 
+#categories .parent{
+    position: relative;
+}
+
+#categories .parent span{
+    width:35px;
+    height:35px;
+    position: absolute;
+    top:0;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer
+}
+
+#categories .parent span::before{
+    content: '>';
+    display: block;
+    color:var(--gray);
+    font-weight:700;
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg);
+}
+
+
+
+
 /* close button */
 #offset-close-button{
     position: absolute;
@@ -88,13 +126,13 @@
     display: none;
 }
 
-#offset-close-button button{
+#offset-close-button{
     border:none;
     outline:none;
     background:none;
 }
 
-#offset-close-button button svg{
+#offset-close-button svg{
     width:20px;
     fill:var(--dark)
 }
@@ -189,10 +227,10 @@
 }
 
 /* кнопки */
-#button-horizontal{}
-#button-vertical-two{}
-#button-vertical-three{}
-#button-vertical-four{}
+/* #button-horizontal{} */
+/* #button-vertical-two{} */
+/* #button-vertical-three{} */
+/* #button-vertical-four{} */
 
 @media(max-width:776px){
     #button-vertical-three,
@@ -200,7 +238,7 @@
         display: none;
     }
 }
-#button-vertical-five{}
+/* #button-vertical-five{} */
 
 @media(max-width:996px){
     #button-vertical-five{
@@ -313,6 +351,12 @@
     display: grid;
     grid-template-columns: 220px 1fr;
     grid-gap:20px
+}
+
+@media(max-width:400px){
+    #goods.horizontal article{
+        grid-template-columns: 1fr;
+    }
 }
 
 #goods.horizontal .description{

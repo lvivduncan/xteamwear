@@ -12,10 +12,7 @@
     align-items: center;
 }
 
-@media(max-width:776px){
-    /* #nav.fixed{
-        padding: 14px 0;
-    } */
+@media(max-width:776px){    
     #nav{
         position: fixed;
         padding: 14px 0;
@@ -74,13 +71,12 @@
 /* іконка меню */
 #menu-button{
     margin: 0 auto 0 15px;
+    background:none;
+    border:none;
     display: none;
 }
 
 @media(max-width:776px){
-    /* .fixed #menu-button{
-        display: block;
-    } */
     #menu-button{
         display: block;
     }
@@ -89,6 +85,46 @@
 #menu-button svg{
     width:25px;
     fill:var(--white);
+}
+
+/* mobile menu */
+#nav.active ul{
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:60;
+    width:100%;
+    background:var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+#nav.active ul li{
+    margin: 10px 0;
+}
+
+#nav.active ul li a{
+    padding: 10px;
+}
+
+/* кнопка закриття */
+#menu-close-button{
+    position: absolute;
+    top:50px;
+    right:50px;
+    z-index: 70;
+    background:none;
+    border:none;
+    display: none;
+}
+
+#menu-close-button svg{
+    width:20px;
+    fill:var(--white)
 }
 
 /*mini logo */
@@ -117,6 +153,8 @@
 }
 
 #search-small{
+    background:none;
+    border:none;
     display: none;
 }
 
@@ -125,12 +163,9 @@
 }
 
 @media(max-width:776px){
-    /* .fixed #search-small{
-        margin-left:auto;
-    } */
     #search-small{
         display: block;
-        margin-left:auto;
+        margin: 0 15px 0 auto;
     }
 }
 
