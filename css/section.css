@@ -125,11 +125,11 @@
 }
 
 /* 1 елемент */
-.toolbar button:first-child{
+.toolbar button#button-horizontal{
     flex-flow: column;
 }
 
-.toolbar button:first-child span{
+.toolbar button#button-horizontal span{
     width:18px;
     height:4px;
     margin: 1px 0;

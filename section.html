@@ -96,27 +96,27 @@
                     </button> Категорії
                 </div>
                 Сортувати: 
-                <button id="button-horizontal">
+                <button id="button-horizontal" class="toolbar-buttons">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <button id="button-vertical-two" class="active">
+                <button id="button-vertical-two" class="active toolbar-buttons">
                     <span></span>
                     <span></span>
                 </button>
-                <button id="button-vertical-three">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <button id="button-vertical-four">
-                    <span></span>
+                <button id="button-vertical-three" class="toolbar-buttons">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <button id="button-vertical-five">
+                <button id="button-vertical-four" class="toolbar-buttons">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button id="button-vertical-five" class="toolbar-buttons">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -267,6 +267,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>
         // tabs + sort
+        $('#button-horizontal').on('click', function(){
+            $('#goods').removeClass().addClass('horizontal');
+            $('.toolbar-buttons').removeClass('active');
+            $(this).addClass('active');
+        });
+        $('#button-vertical-two').on('click', function(){
+            $('#goods').removeClass().addClass('vertical-two');
+            $('.toolbar-buttons').removeClass('active');
+            $(this).addClass('active');
+        });
+        $('#button-vertical-three').on('click', function(){
+            $('#goods').removeClass().addClass('vertical-three');
+            $('.toolbar-buttons').removeClass('active');
+            $(this).addClass('active');
+        });
+        $('#button-vertical-four').on('click', function(){
+            $('#goods').removeClass().addClass('vertical-four');
+            $('.toolbar-buttons').removeClass('active');
+            $(this).addClass('active');
+        });
+        $('#button-vertical-five').on('click', function(){
+            $('#goods').removeClass().addClass('vertical-five');
+            $('.toolbar-buttons').removeClass('active');
+            $(this).addClass('active');
+        });
     </script>
     <script src="js/init.js"></script>
 </body>
