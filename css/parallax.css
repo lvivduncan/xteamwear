@@ -1,0 +1,46 @@
+.parallax {
+    min-height: 400px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.parallax h1,
+.parallax h2,
+.parallax h3,
+.parallax h4,
+.parallax p{
+    color:var(--white);
+    padding:0 20px;
+    margin:0 0 10px;
+    text-align:center
+}
+
+.parallax h1{
+    font-size:50px;
+    font-weight:700
+}
+
+.parallax h2{
+    font-size: 40px
+}
+
+.parallax h3{
+    font-size:30px
+}
+
+.parallax h4{
+    font-size:20px
+}
+
+@media(max-width:776px){
+    .parallax h1,
+    .parallax h2,
+    .parallax h3,
+    .parallax h4,
+    .parallax p{
+        font-size:16px
+    }
+}
