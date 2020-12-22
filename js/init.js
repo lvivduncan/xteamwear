@@ -1,7 +1,7 @@
 
 $(function(){
     $(window).scroll(function(){
-        if ($(this).scrollTop() > 10 && $(window).width()>777) {
+        if ($(this).scrollTop() > 10 && $(window).width()<777) {
             $('#nav').addClass('fixed');
         } else {
             $('#nav').removeClass('fixed');
